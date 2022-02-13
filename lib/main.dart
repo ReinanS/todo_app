@@ -1,10 +1,16 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todo_app/core/theme_app.dart';
+import 'package:todo_app/core/app_theme.dart';
 import 'package:todo_app/pages/home_page.dart';
 import 'package:todo_app/provider/todos.dart';
 
-void main() => runApp(MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -13,7 +19,7 @@ class MyApp extends StatelessWidget {
       create: (context) => TodosProvider(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeApp.darkTheme,
+        theme: AppTheme.darkTheme,
         home: HomePage(),
       ),
     );
