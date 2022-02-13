@@ -29,7 +29,6 @@
 - [x] Todo Page.
 - [x] Completed Page.
 - [x] Edit Page.
-- [x] Completed Page.
 - [x] Uso de provider para o gerenciamento de estado.
 - [x] Integração com o Firebase Cloud Store para o armazenamento em nuvem.
 
