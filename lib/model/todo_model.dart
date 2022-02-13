@@ -3,16 +3,18 @@ class TodoField {
 }
 
 class TodoModel {
-  DateTime createdTime;
-  String title;
   String? id;
+  String title;
   String description;
+  DateTime createdTime;
+
   bool isDone;
 
   TodoModel({
-    required this.createdTime,
+    this.id,
     required this.title,
     this.description = '',
+    required this.createdTime,
     this.isDone = false,
   });
 }
