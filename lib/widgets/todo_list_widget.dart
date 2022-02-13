@@ -17,8 +17,9 @@ class TodoListWidget extends StatelessWidget {
             ),
           )
         : ListView.separated(
-            separatorBuilder: (context, index) => Container(height: 8),
+            separatorBuilder: (context, index) => Container(height: 10),
             itemCount: todos.length,
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             itemBuilder: (context, index) => TodoWidget(todo: todos[index]),
           );
   }
