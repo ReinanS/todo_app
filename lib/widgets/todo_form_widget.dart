@@ -61,11 +61,11 @@ class TodoFormWidget extends StatelessWidget {
       child: ElevatedButton(
         style: ButtonStyle(
             backgroundColor:
-                MaterialStateProperty.all(Theme.of(context).primaryColor)),
+                MaterialStateProperty.all(Theme.of(context).cardColor)),
         onPressed: onSavedTodo,
         child: Text(
           'Save',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(fontSize: 16, color: Colors.white),
         ),
       ),
     );
